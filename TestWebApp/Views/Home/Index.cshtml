@@ -1,5 +1,8 @@
 ﻿@{
     ViewBag.Title = "Home Page";
+    var assembly = System.Reflection.Assembly.GetExecutingAssembly();
+   
+    string version = assembly.GetName().Version.ToString();
 }
 
 <div class="jumbotron">
@@ -7,4 +10,5 @@
     <p class="lead">Some test content</p>
     <p><a href="http://asp.net" class="btn btn-primary btn-lg">and link &raquo;</a></p>
     <p>test check-in</p>
+    <p>Assembly version: @version</p>
 </div>  
