@@ -4,6 +4,8 @@
     var assembly = typeof(MvcApplication).Assembly;
 
     string version = assembly.GetName().Version.ToString();
+
+    string param = System.Web.Configuration.WebConfigurationManager.AppSettings["param"]; 
 }
 
 <div class="jumbotron">
@@ -13,4 +15,5 @@
     <p>test check-in</p>
     <p>Assembly version: @version</p>
     <p>Automatic deploy</p>
+    <p>param: @param</p>
 </div>  
