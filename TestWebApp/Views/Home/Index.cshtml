@@ -1,7 +1,8 @@
 ﻿@{
     ViewBag.Title = "Home Page";
-    var assembly = System.Reflection.Assembly.GetExecutingAssembly();
-   
+
+    var assembly = typeof(MvcApplication).Assembly;
+
     string version = assembly.GetName().Version.ToString();
 }
 
