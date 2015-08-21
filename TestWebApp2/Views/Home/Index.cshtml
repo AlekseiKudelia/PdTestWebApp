@@ -1,11 +1,20 @@
 ﻿@{
     ViewBag.Title = "Home Page";
+
+    var assembly = typeof(MvcApplication).Assembly;
+
+    string version = assembly.GetName().Version.ToString();
+
+    string param = System.Web.Configuration.WebConfigurationManager.AppSettings["param2"];
 }
 
 <div class="jumbotron">
     <h1>ASP.NET</h1>
     <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
     <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    <p>Assembly version: @version</p>
+    <p>Automatic deploy</p>
+    <p>param: @param</p> 
 </div>
 
 <div class="row">
